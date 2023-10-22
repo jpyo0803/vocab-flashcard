@@ -47,9 +47,9 @@ random.shuffle(vocabs)
 for vocab in vocabs:
   status, (q, p, d) = QueryVocab(vocab, mw_api_key)
   if status == True:
-    print(f'{q} / {p} / ? (Enter to display the answer)')
+    print(f'Q: {q} ({p}) \t\t Hit enter to display the answer')
     input()
-    print(f'{q} / {p} / {d}', end='\r\n')
+    print(f'A: {d}', end='\r\n')
 
   else:
     print(f'Error: \"{vocabs}\" query FAILED')
